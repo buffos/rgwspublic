@@ -1,0 +1,26 @@
+{
+  "name": "greek-afm",
+  "version": "1.0.0",
+  "description": "client library for greek GSIS tax service in Nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/buffos/rgwspublic.git"
+  },
+  "keywords": [
+    "nodejs",
+    "afm",
+    "tax",
+    "vat",
+    "aade"
+  ],
+  "author": "Kostas Oraiopoulos",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/buffos/rgwspublic/issues"
+  },
+  "homepage": "https://github.com/buffos/rgwspublic#readme"
+}
