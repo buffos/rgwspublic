@@ -6,11 +6,17 @@ This is a port of the same named library for Go. You can find the original work 
 
 ## Installation
 
+```
+npm install greek-afm
+```
+
 ## Usage with Promises
 
 ```javascript
-version().then((d) => console.log(d));
-afmInfo('', 'AFM_NUMBER_SEARCHED', 'USERNAME', 'PASSWORD').then((d) =>
+const afmService = require('greek-afm');
+
+afmService.version().then((d) => console.log(d));
+afmService.afmInfo('', 'AFM_NUMBER_SEARCHED', 'USERNAME', 'PASSWORD').then((d) =>
   console.log(d);
 );
 ```
@@ -20,13 +26,10 @@ afmInfo('', 'AFM_NUMBER_SEARCHED', 'USERNAME', 'PASSWORD').then((d) =>
 There is no need to use catch, it will not reject. Errors will be in the resolve part of the promise
 
 ```javascript
-const version = await version();
-const { afmData, error } = await afmInfo(
-  '',
-  'AFM_NUMBER_SEARCHED',
-  'USERNAME',
-  'PASSWORD'
-);
+const afmService = require('greek-afm');
+
+const version = await afmService.version();
+const {afmData, error} = await afmService.afmInfo('', 'AFM_NUMBER_SEARCHED', 'USERNAME', 'PASSWORD');
 ```
 
 ## Πληροφορίες για την Υπηρεσία
